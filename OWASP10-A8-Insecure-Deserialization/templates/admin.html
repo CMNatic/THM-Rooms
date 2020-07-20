@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Your Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/stylesheet.css">
+</head>
+
+<body>
+    <div>
+        <header id="header" class="anchor">
+            <nav class="navbar navbar-light navbar-expand-lg fixed-top">
+                <div class="container"><a class="navbar-brand" href="/">Vim Exchange Ltd</a><button data-toggle="collapse" class="navbar-toggler collapsed" data-target="#navcol-1"><span></span><span></span><span></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="/">Home</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="/admin">Admin Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group"></div>
+                </div>
+            </nav>
+    <div id="admin-overview">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-xl-7" id="admin-start">
+                    <h3>Your Admin Dashboard&nbsp; <span class="badge badge-pill badge-info">Hi, {{username}}</span></h3>
+                </div>
+                <div class="col-md-6 col-xl-5 text-center">
+                    <h3 class="text-left">Support Tickets&nbsp;<span class="badge badge-pill badge-danger text-right">24</span>&nbsp;</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xl-7">
+                <div class="card">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs">
+                            <li class="nav-item"><a class="nav-link active" href="#">Messages</a></li>
+                            <li class="nav-item"><a class="nav-link text-body">Manage Users</a></li>
+                            <li class="nav-item"><a class="nav-link">Edit Website</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-body" id="messages">
+                        <h4 class="card-title">From: Tony the Tiger</h4>
+                        <p class="card-text">Hi mate! Just wanted to thank you for updating the platform. Now I can exchange my Vim with ease!<br></p><button class="btn btn-outline-primary" type="button">Reply</button><button class="btn btn-danger" id="Delete" type="button">Delete</button></div>
+                </div>
+                <div class="card">
+                	<div class="container-fluid">
+		                <div class="alert alert-primary alert-dismissable fade show">
+			                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    Nice one! Here's the admin flag {{adminflag}} </a>
+                                    </div>
+                            </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xl-5">
+                <ul class="list-group"></ul>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Recent Submissions</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item"><span>How do I log in??</span><span class="text-right" id="badge-1"><span class="badge badge-pill badge-primary text-center">User Login</span></span>
+                            </li>
+                            <li class="list-group-item"><span>Security Update</span><span class="text-right" id="badge-2"><span class="badge badge-pill badge-danger">Critical</span></span>
+                            </li>
+                            <li class="list-group-item"><span>Migrating to V2</span><span class="text-right" id="badge-3"><span class="badge badge-pill badge-success text-center">User Login</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+
+            <div class="row">
+                <div class="col-md-12" id="statistics">
+                    <h1 class="text-center statistics" id="staistics">Site Statistics</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="text-center">Server Load:</h3>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-center">User Growth:</h3>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-center">Exchanges by Type:</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div><canvas data-bs-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:&quot;#b2de54&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;4500&quot;,&quot;5300&quot;,&quot;6250&quot;,&quot;7800&quot;,&quot;9800&quot;,&quot;15000&quot;],&quot;fill&quot;:true}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{}}}"></canvas></div>
+                </div>
+                <div class="col-md-4">
+                    <div><canvas data-bs-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;4500&quot;,&quot;5300&quot;,&quot;6250&quot;,&quot;7800&quot;,&quot;9800&quot;,&quot;15000&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{&quot;fontSize&quot;:&quot;14&quot;,&quot;display&quot;:false}}}"></canvas></div>
+                </div>
+                <div class="col-md-4">
+                    <div><canvas data-bs-chart="{&quot;type&quot;:&quot;pie&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Nano&quot;,&quot;Emacs&quot;,&quot;Gedit&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Exchanges by Type&quot;,&quot;backgroundColor&quot;:[&quot;rgb(0,163,221)&quot;,&quot;#aadd6d&quot;,&quot;#d81e05&quot;],&quot;borderColor&quot;:[&quot;rgba(0,0,0,0.1)&quot;,&quot;rgba(0,0,0,0.1)&quot;,&quot;rgba(0,0,0,0.1)&quot;],&quot;data&quot;:[&quot;100&quot;,&quot;Emacs&quot;,&quot;gedit&quot;]},{&quot;label&quot;:&quot;Emacs&quot;,&quot;backgroundColor&quot;:[&quot;rgba(0,0,0,0.1)&quot;],&quot;borderColor&quot;:[&quot;rgba(0,0,0,0.1)&quot;],&quot;data&quot;:[&quot;200&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:true,&quot;reverse&quot;:false},&quot;title&quot;:{&quot;display&quot;:false,&quot;fontColor&quot;:&quot;#cf4848&quot;}}}"></canvas></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/page.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/js/chart.min.js"></script>
+    <script src="/static/js/bs-init.js"></script>
+</body>
+
+</html>

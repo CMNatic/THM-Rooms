@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Example</title>
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/quiz/sweet-alert.css">
+  <link rel="stylesheet" href="/static/quiz/quiz.css">
+  <style>
+    #quiz {
+      height: 600px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div id="quiz"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="/static/quiz/sweet-alert.js"></script>
+  <script src="/static/quiz/quiz.js"></script>
+  <script>
+    $(function() {
+      $('#quiz').quiz("/static/quiz/cookies.json");
+    });
+  </script>
+</body>
+</html>
