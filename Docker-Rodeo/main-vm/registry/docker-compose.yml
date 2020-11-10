@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  actual-registry-1:
+    image: registry:2
+    ports:
+    - "7000:5000"
+    environment:
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
+    volumes:
+      - /home/cmnatic/actualvm/registry/data:/data
+    restart: unless-stopped
